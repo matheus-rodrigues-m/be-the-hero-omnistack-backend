@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "JC",
+            "command": "java",
+            "windows": {
+                "command": "C:\\Program Files\\Java\\jre1.8.0_241\\bin\\javac.exe",
+            },
+
+            "args": [
+                
+                "${file}"
+                            
+                ]        
+            },
+            {
+                "taskName": "JR",
+                "command": "java",
+                "windows": {
+                    "command": "C:\\Program Files\\Java\\jre1.8.0_241\\bin\\java.exe",
+                },
+
+                "args": [
+                    
+                    "${fileBasenameNoExtension}"
+                                
+                    ]        
+                }
+    ]
+}
