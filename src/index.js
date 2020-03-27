@@ -6,7 +6,7 @@ const app = express(); //Crianção da Aplicação
 
 app.use(cors());
 app.use(express.json());
-app.use(routes); //Para que o app funcione da mesma forma com as rotas..
+app.use(routes); //Para que o app funcione da mesma forma com as rotas...
 
 
 app.listen(3333); //Endereçamento da aplicação.
