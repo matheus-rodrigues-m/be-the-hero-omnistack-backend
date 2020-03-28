@@ -1,5 +1,5 @@
 const connection = require('../database/connection'); //Estabelecendo conexão com o BD
-const crypto = require('crypto'); //*Gera uma sequência de Caracteres / Recortado do routes.js
+const generadeUniqueId = require('../utils/generateUniqueId'); //Conecta com o generadeUniqueId do 'utils'
 
 module.exports = { //Exportando um objeto com os métodos, para arquivos externos
 
@@ -12,7 +12,7 @@ module.exports = { //Exportando um objeto com os métodos, para arquivos externo
     async create(request, response) {
         const {name, email, whatsapp, city, uf} = request.body; //Até o 'return', foi recortado de routes.js
 
-        const id = crypto.randomBytes(4).toString('HEX');
+        const id = generadeUniqueId();
         
         await connection('ongs').insert({
             id,
